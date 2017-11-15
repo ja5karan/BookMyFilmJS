@@ -1,0 +1,114 @@
+<div class="col-md-3" ng-repeat="x in ratingCtrl.mapp_arr ">
+
+ <a  ng-click="ratingCtrl.ShowDialog(MOVIENAME)"><img width="180" height="240" src=https://image.tmdb.org/t/p/w500/{{x.POSTER}}></a><br/><br/>
+   <div class="bookDetailsTab"><p>{{x.MOVIENAME}}</p></div><br/>
+
+<div class="bookTab">
+     <form id="ratingsForm">
+
+	<div class="stars">
+
+<input type="radio" name="star" class="star-1" id="star-1" value=1 ng-model="reviewData.rrate"/>
+
+<label class="star-1" for="star-1">1</label>
+
+<input type="radio" name="star" class="star-2" id="star-2" value=2 ng-model="reviewData.rrate"/>
+
+<label class="star-2" for="star-2">2</label>
+
+<input type="radio" name="star" class="star-3" id="star-3" value=3 ng-model="reviewData.rrate"/>
+
+<label class="star-3" for="star-3">3</label>
+
+<input type="radio" name="star" class="star-4" id="star-4" value=4 ng-model="reviewData.rrate"/>
+
+<label class="star-4" for="star-4">4</label>
+
+<input type="radio" name="star" class="star-5" id="star-5" value=5 ng-model="reviewData.rrate"/>
+
+<label class="star-5" for="star-5">5</label>
+
+<span></span>
+     	</div>
+
+     </form>
+  </div>
+</div>
+
+
+<style media="screen">
+tr {
+width: 100%;
+display: inline-table;
+}
+h3 {
+	/*color: #e0e0d1;*/
+	font-family: 'MEgalopolisExtraRegular';
+	text-transform: uppercase;
+	/*text-shadow: -2px -2px 2px #CCCCCC, 2px 2px 2px #000000;*/
+}
+.outline{
+  border-style:outset;
+  /*width: 100%;*/
+}
+
+table{
+height:50%;
+}
+tbody{
+overflow-y: scroll;
+/*overflow-y: hidden;*/
+height: 200px;
+width: 100%;
+position: absolute;
+}
+</style>
+
+
+
+<div class="row">
+<!-- <div class="fix-div"> -->
+
+
+  <div class="col-sm-2">
+  </div>
+
+
+
+  <div class="col-sm-5">
+    <div class="outline">
+<center>
+ <h3>Review For {{Moviename}}</h3>
+ </center>
+<div class="col-xs-12">
+
+&nbsp;<input type="text" class="form-control" placeholder="Your Name"  id="unm" ng-model="ratingCtrl.username" required/>
+    <br>
+</div>
+
+&nbsp;&nbsp;&nbsp;  <textarea name="txtarea" rows="4" cols="68" placebholder="Your Comment Here" id="tarea" ng-model="ratingCtrl.review" required></textarea>
+&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-success"type="submit" ng-click="insertReview()">Submit</button>
+<br><br>
+</div>
+</div>
+  <div class="col-sm-2">
+
+  </div>
+  </div>
+
+
+<!-- </div> -->
+<br>
+
+<!-- <div id="wrapper"> -->
+<div class="row" >
+
+<div class="col-sm-2">
+
+</div>
+
+
+
+</div>
+
+<!-- </div> -->
